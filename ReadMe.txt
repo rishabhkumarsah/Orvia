@@ -1,5 +1,19 @@
+--------------------------------------------------------------------------------
 Run Command: corepack pnpm dev
+--------------------------------------------------------------------------------
+.next is Next.js’s build/cache folder. It stores Turbopack dev build artifacts tied to the old project path and file
+state. 
 
+After moving the project to new directory/location, delete the stale cache: Remove-Item -Recurse -Force .next
+
+Then start fresh: corepack pnpm dev
+
+For future use, run: corepack pnpm dev
+
+If you see the Turbopack rebuild/fatal error again, stop the server and run:
+	Remove-Item -Recurse -Force .next
+	corepack pnpm dev
+--------------------------------------------------------------------------------
 This is a modern frontend web app / landing page for ORVIA. More specifically, it is a Next.js single-page marketing website with animated sections,
 responsive design, image assets, and reusable React components.
 
@@ -212,3 +226,4 @@ This project is a frontend React/Next.js landing page. The most important things
 
 Once you understand those, you will be able to change text, replace images, edit sections, add new sections, modify animations, and maintain similar web
 apps.
+--------------------------------------------------------------------------------

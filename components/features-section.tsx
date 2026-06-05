@@ -38,7 +38,7 @@ export function FeaturesSection() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100])
 
   return (
-    <section ref={ref} className="relative py-32 px-4 overflow-hidden">
+    <section id="products" ref={ref} className="relative scroll-mt-28 py-32 px-4 overflow-hidden">
       {/* Parallax background elements */}
       <motion.div
         style={{ y }}

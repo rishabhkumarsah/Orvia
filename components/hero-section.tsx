@@ -186,6 +186,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <motion.button 
+            onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20"
@@ -193,6 +194,7 @@ export function HeroSection() {
             Explore Products
           </motion.button>
           <motion.button 
+            onClick={() => document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" })}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 bg-card/80 backdrop-blur-sm border border-border rounded-full text-foreground font-medium hover:bg-card transition-all duration-300 shadow-sm"

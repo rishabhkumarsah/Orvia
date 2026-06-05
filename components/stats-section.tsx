@@ -22,7 +22,7 @@ export function StatsSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95])
 
   return (
-    <section ref={ref} className="relative py-24 px-4 overflow-hidden">
+    <section id="about" ref={ref} className="relative scroll-mt-28 py-24 px-4 overflow-hidden">
       {/* Moving gradient background */}
       <motion.div
         style={{ x }}

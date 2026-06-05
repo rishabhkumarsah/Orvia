@@ -17,7 +17,7 @@ export function MissionSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.9])
 
   return (
-    <section ref={ref} className="relative py-32 px-4 overflow-hidden">
+    <section id="mission" ref={ref} className="relative scroll-mt-28 py-32 px-4 overflow-hidden">
       {/* Parallax background elements */}
       <motion.div
         style={{ y: y1, rotate }}

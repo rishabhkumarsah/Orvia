@@ -29,7 +29,7 @@ export function CTASection() {
   }
 
   return (
-    <section ref={ref} className="relative py-32 px-4 overflow-hidden">
+    <section id="contact" ref={ref} className="relative scroll-mt-28 py-32 px-4 overflow-hidden">
       {/* Background gradient */}
       <motion.div
         style={{ y }}

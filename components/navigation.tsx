@@ -7,10 +7,10 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { label: "Products", href: "#" },
-  { label: "Mission", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Products", href: "#products" },
+  { label: "Mission", href: "#mission" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ]
 
 export function Navigation() {
@@ -60,6 +60,7 @@ export function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <motion.button
+              onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-6 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:bg-primary/90 transition-all duration-300"
@@ -121,7 +122,10 @@ export function Navigation() {
               y: isMobileMenuOpen ? 0 : 20,
             }}
             transition={{ delay: 0.4 }}
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => {
+              setIsMobileMenuOpen(false)
+              document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })
+            }}
             className="mt-4 px-8 py-3 bg-primary text-primary-foreground font-medium rounded-full"
           >
             Shop Now
